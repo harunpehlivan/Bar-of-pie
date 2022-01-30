@@ -40,7 +40,7 @@ ax2.set_xlim(- 2.5 * width, 2.5 * width)
 # get the wedge data
 theta1, theta2 = ax1.patches[0].theta1, ax1.patches[0].theta2
 center, r = ax1.patches[0].center, ax1.patches[0].r
-bar_height = sum([item.get_height() for item in ax2.patches])
+bar_height = sum(item.get_height() for item in ax2.patches)
 
 # draw top connecting line
 x = r * np.cos(np.pi / 180 * theta2) + center[0]
